@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f1f1f1;
+  padding: 20px;
+  font-family: Arial;
+}
+
+/* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 50px;
+  word-break: break-all;
+}
+
+.row {
+  margin: 8px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+  padding: 8px;
+}
+
+/* Create four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+}
+
+/* Clear floats after rows */ 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: white;
+  padding: 10px;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 900px) {
+  .column {
+    width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="w3-sidebar w3-bar-block w3-black" style="width:330px;" id="mySidebar">
+  <button class="w3-bar-item w3-xxlarge w3-serif w3-silver"
+  onclick="w3_close()"> Philippines &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &times;</button>
+  <br>
+  <a href="index.html" class="w3-bar-item w3-button w3-large w3-serif"> <i class="fa fa-home w3-xlarge"> &nbsp </i> Home </a>
+  <a href="HistoryofPH.html" class="w3-bar-item w3-button w3-large w3-serif"> <i class="fa fa-book w3-xlarge"> &nbsp </i> History </a>
+  <a href="Geography.html" class="w3-bar-item w3-button w3-large w3-serif"><i class="fa fa-file w3-xlarge"> &nbsp </i> Geography and Environment </a>
+  <a href="Demographics.html" class="w3-bar-item w3-button w3-large w3-serif"><i class="fa fa-handshake-o w3-xlarge"> &nbsp </i> Demographics </a>
+  <a href="Culture.html" class="w3-bar-item w3-button w3-large w3-serif"><i class="fa fa-pencil w3-xlarge"> &nbsp </i> Culture </a>
+  <br>
+   <button class="w3-bar-item w3-xlarge w3-serif w3-gray"><i class="fa fa-map">&nbsp</i> Tourist Attractions </button>
+   <br>
+  
+  
+  <button class="w3-button w3-block w3-left-align w3-large w3-serif" onclick="myAccFunc()">&nbsp
+Luzon <i class="fa fa-caret-down"></i>
+  </button>
+  <div id="demoAcc1" class="w3-hide w3-white w3-card">
+    <a href="Luzon1.html" class="w3-bar-item w3-button"> Mines View Park </a>
+    <a href="Luzon2.html" class="w3-bar-item w3-button"> Mayon Volcano </a>
+    <a href="Luzon3.html" class="w3-bar-item w3-button"> Banaue Rice Terraces </a>
+  </div>
+
+
+ <button class="w3-button w3-block w3-left-align w3-large w3-serif" onclick="myAccFun()">&nbsp
+Visayas <i class="fa fa-caret-down"></i>
+  </button>
+  <div id="demoAcc2" class="w3-hide w3-white w3-card">
+    <a href="Visayas1.html" class="w3-bar-item w3-button">Boracay</a>
+    <a href="Visayas2.html" class="w3-bar-item w3-button">Chocolate Hills - Bohol</a>
+    <a href="Visayas3.html" class="w3-bar-item w3-button"> Oslob - Cebu </a>
+  </div>
+
+
+ <button class="w3-button w3-block w3-left-align w3-large w3-serif" onclick="myAccFu()">&nbsp 
+Mindanao <i class="fa fa-caret-down"></i>
+  </button>
+  <div id="demoAcc3" class="w3-hide w3-white w3-card">
+    <a href="Mindanao1.html" class="w3-bar-item w3-button"> Island Garden City of Samal </a>
+    <a href="Mindanao2.html" class="w3-bar-item w3-button">Tinuy-an Falls</a>
+    <a href="Mindanao3.html" class="w3-bar-item w3-button">Daku Island</a>
+
+  </div>
+  <br>
+   <button class="w3-bar-item w3-xlarge w3-serif w3-gray"><i class="fa fa-film">&nbsp</i> Gallery</button>
+   <br>
+  <a href="VideoGallery.html" class="w3-bar-item w3-button w3-large w3-serif"><i class="fa fa-image w3-xlarge">&nbsp</i> &nbsp Video Gallery</a>
+  <br>
+  <button class="w3-bar-item w3-xlarge w3-serif w3-gray"><i class="fa fa-comments-o">&nbsp</i> Reach us out!</button>
+  <br>
+  <a href="LoginForm.html" class="w3-bar-item w3-button w3-large w3-serif"><i class="fa fa-address-book w3-xlarge">&nbsp</i> Log-in</a>
+  <a href="ContactForm.html" class="w3-bar-item w3-button w3-large w3-serif"><i class="fa fa-phone w3-xlarge">&nbsp</i> Contact Us</a>
+<br>
+</div>
+
+<div>
+  <button class="w3-button w3-xxlarge" onclick="w3_open()">&#9776;</button>
+  <div class="w3-container">
+</div>
+</div>
+</body>
+
+
+<script>
+function myAccFunc() {
+  var x = document.getElementById("demoAcc1");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+    x.previousElementSibling.className += " w3-green";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+    x.previousElementSibling.className = 
+    x.previousElementSibling.className.replace(" w3-green", "");
+  }
+}
+function myAccFun() {
+  var x = document.getElementById("demoAcc2");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+    x.previousElementSibling.className += " w3-green";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+    x.previousElementSibling.className = 
+    x.previousElementSibling.className.replace(" w3-green", "");
+  }
+}
+function myAccFu() {
+  var x = document.getElementById("demoAcc3");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+    x.previousElementSibling.className += " w3-green";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+    x.previousElementSibling.className = 
+    x.previousElementSibling.className.replace(" w3-green", "");
+  }
+}
+
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+}
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+</style>
+</head>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  font-size: 17px;
+}
+
+.container {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.container img {vertical-align: middle;}
+
+.container .content {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+</style>
+</head>
+<body>
+
+<!-- MAIN (Center website) -->
+<div class="main">
+
+<h1> Chocolate Hills </h1>
+<hr>
+
+<h2>Bohol, Philippines</h2>
+
+
+<!-- Portfolio Gallery Grid -->
+<div class="row">
+  <div class="column">
+    <div class="content">
+      <img src="https://media.istockphoto.com/id/475912894/photo/beautiful-chocolate-hills-in-bohol-philippines.jpg?s=612x612&w=0&k=20&c=t9t_rRTjEZVz2CdofDhrQph_2OeFB_eH04iTB1AHYFU=" alt="Mountains" style="width:100%">
+      <h3>What is famous in this place?</h3>
+      <p>Chocolate Hills in Bohol is a famed tourist attraction in the Philippines which continues to draw attention for its unique and majestic characteristics. There are more than 1,000 symmetrical mounds, conical and dome-shaped that most people liken them to Hershey's Kisses.</p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <img src="https://cdn.theculturetrip.com/wp-content/uploads/2018/04/shutterstock_425002612.jpg" alt="Lights" style="width:100%">
+      <h3> Why is it called Chocolate Hills in Bohol? </h3>
+      <p> In the rainy season, the grass blanketing the hills gives them a soft and lush appearance. In the summer when the vegetation dies off, they take on a golden-brown hue, giving them their name: Chocolate Hills..</p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <img src="https://www.jonnymelon.com/wp-content/uploads/2019/09/chocolate-hills-bohol-7.jpg" alt="Nature" style="width:100%">
+      <h3>Where are the Chocolate Hills located?</h3>
+      <p>
+The Chocolate Hills are a group of unusually shaped hills located in the middle of the island of Bohol in Philippines. This extraordinary landscape is unique to this small island.</p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <img src="https://gttp.imgix.net/224846/x/0/bohol-copy.jpg?w=360&dpr=2&h=430&fit=crop&crop=faces%2Centropy%2Ccenter&auto=format%2Ccompress&q=35&min-h=430&ixlib=react-9.4.0" alt="Mountains" style="width:100%">
+      <h3>What is the specialty of Bohol?</h3>
+      <p>
+Bohol is known for natural attractions such as the Chocolate Hills, a collection of cone-shaped hills made of limestone, and the Tarsier Sanctuary, home of one of the smallest primates in the world. For those spending a few days or weeks in this tropical island, there's plenty of options on where to eat in Bohol..</p>
+    </div>
+  </div>
+<!-- END GRID -->
+</div>
+
+<style>
+    footer {
+  text-align: center;
+  padding: 2px;
+  background-color: Darkgrey;
+  color: white;
+}
+    
+</style>
+<body>
+    <footer>
+        <br>
+  <a href="HistoryofPH.html"> About Philippines </a> &nbsp
+  <a href="Luzon1.html"> Tourist Attractions </a> &nbsp
+  <a href="VideoGallery.html"> Video Gallery </a> &nbsp
+  <a href="LoginForm.html"> Login </a> &nbsp
+  <a href="ContactForm.html"> Contact Us </a></p>
+  <p> Copyright@2022. All Rights Reserved </p>
+</footer>
+
+
+</body>
+</html>

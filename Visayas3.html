@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+body{
+    background-image: url(https://wallpapercave.com/wp/wp5440194.jpg);
+    background-size: 110%;
+    background-repeat: no repeat;
+  }
+   .container {
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.7);
+        text-align: justify;
+        line-height: 1.3;
+        border-spacing: 0px;
+        position: relative;
+      }
+</style>
+<style>
+img {
+  border: 5px solid #123456;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+}
+
+.header {
+  text-align: center;
+  padding: 32px;
+}
+
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+</style>
+<body>
+
+<div class="w3-sidebar w3-bar-block w3-black" style="width:330px;" id="mySidebar">
+  <button class="w3-bar-item w3-xxlarge w3-serif w3-silver"
+  onclick="w3_close()"> Philippines &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &times;</button>
+  <br>
+  <a href="index.html" class="w3-bar-item w3-button w3-large w3-serif"> <i class="fa fa-home w3-xlarge"> &nbsp </i> Home </a>
+  <a href="HistoryofPH.html" class="w3-bar-item w3-button w3-large w3-serif"> <i class="fa fa-book w3-xlarge"> &nbsp </i> History </a>
+  <a href="Geography.html" class="w3-bar-item w3-button w3-large w3-serif"><i class="fa fa-file w3-xlarge"> &nbsp </i> Geography and Environment </a>
+  <a href="Demographics.html" class="w3-bar-item w3-button w3-large w3-serif"><i class="fa fa-handshake-o w3-xlarge"> &nbsp </i> Demographics </a>
+  <a href="Culture.html" class="w3-bar-item w3-button w3-large w3-serif"><i class="fa fa-pencil w3-xlarge"> &nbsp </i> Culture </a>
+  <br>
+   <button class="w3-bar-item w3-xlarge w3-serif w3-gray"><i class="fa fa-map">&nbsp</i> Tourist Attractions </button>
+   <br>
+  
+  
+  <button class="w3-button w3-block w3-left-align w3-large w3-serif" onclick="myAccFunc()">&nbsp
+Luzon <i class="fa fa-caret-down"></i>
+  </button>
+  <div id="demoAcc1" class="w3-hide w3-white w3-card">
+    <a href="Luzon1.html" class="w3-bar-item w3-button"> Mines View Park </a>
+    <a href="Luzon2.html" class="w3-bar-item w3-button"> Mayon Volcano </a>
+    <a href="Luzon3.html" class="w3-bar-item w3-button"> Banaue Rice Terraces </a>
+  </div>
+
+
+ <button class="w3-button w3-block w3-left-align w3-large w3-serif" onclick="myAccFun()">&nbsp
+Visayas <i class="fa fa-caret-down"></i>
+  </button>
+  <div id="demoAcc2" class="w3-hide w3-white w3-card">
+    <a href="Visayas1.html" class="w3-bar-item w3-button">Boracay</a>
+    <a href="Visayas2.html" class="w3-bar-item w3-button">Chocolate Hills - Bohol</a>
+    <a href="Visayas3.html" class="w3-bar-item w3-button"> Oslob - Cebu </a>
+  </div>
+
+
+ <button class="w3-button w3-block w3-left-align w3-large w3-serif" onclick="myAccFu()">&nbsp 
+Mindanao <i class="fa fa-caret-down"></i>
+  </button>
+  <div id="demoAcc3" class="w3-hide w3-white w3-card">
+    <a href="Mindanao1.html" class="w3-bar-item w3-button"> Island Garden City of Samal </a>
+    <a href="Mindanao2.html" class="w3-bar-item w3-button">Tinuy-an Falls</a>
+    <a href="Mindanao3.html" class="w3-bar-item w3-button">Daku Island</a>
+
+  </div>
+  <br>
+   <button class="w3-bar-item w3-xlarge w3-serif w3-gray"><i class="fa fa-film">&nbsp</i> Gallery</button>
+   <br>
+  <a href="VideoGallery.html" class="w3-bar-item w3-button w3-large w3-serif"><i class="fa fa-image w3-xlarge">&nbsp</i> &nbsp Video Gallery</a>
+  <br>
+  <button class="w3-bar-item w3-xlarge w3-serif w3-gray"><i class="fa fa-comments-o">&nbsp</i> Reach us out!</button>
+  <br>
+  <a href="LoginForm.html" class="w3-bar-item w3-button w3-large w3-serif"><i class="fa fa-address-book w3-xlarge">&nbsp</i> Log-in</a>
+  <a href="ContactForm.html" class="w3-bar-item w3-button w3-large w3-serif"><i class="fa fa-phone w3-xlarge">&nbsp</i> Contact Us</a>
+<br>
+</div>
+
+<div>
+  <button class="w3-button w3-xxlarge" onclick="w3_open()">&#9776;</button>
+  <div class="w3-container">
+</div>
+</div>
+</body>
+
+
+<script>
+function myAccFunc() {
+  var x = document.getElementById("demoAcc1");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+    x.previousElementSibling.className += " w3-green";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+    x.previousElementSibling.className = 
+    x.previousElementSibling.className.replace(" w3-green", "");
+  }
+}
+function myAccFun() {
+  var x = document.getElementById("demoAcc2");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+    x.previousElementSibling.className += " w3-green";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+    x.previousElementSibling.className = 
+    x.previousElementSibling.className.replace(" w3-green", "");
+  }
+}
+function myAccFu() {
+  var x = document.getElementById("demoAcc3");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+    x.previousElementSibling.className += " w3-green";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+    x.previousElementSibling.className = 
+    x.previousElementSibling.className.replace(" w3-green", "");
+  }
+}
+
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+}
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+</style>
+</head>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  font-size: 17px;
+}
+
+.container {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.container img {vertical-align: middle;}
+
+.container .content {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<div class="header">
+  <h1 style = "font-family:fantasy; line-height:20%; COLOR:WHITE;">OSLOB - CEBU</h1>
+  <p style="color:white;">Cebu, Philippines</p>
+</div>
+
+<!-- Photo Grid -->
+<div class="row"> 
+  <div class="column">
+    <img src="https://gttp.imgix.net/225439/x/0/" style="width:100%">
+    <img src="https://gttp.imgix.net/349418/x/0/a-tourist-snorkeling-and-swimming-alongside-a-whale-shark-in-oslob-cebu.jpg?w=360&dpr=2&h=210&fit=crop&crop=center&auto=format%2Ccompress&q=35&min-h=210&ixlib=react-9.4.0" style="width:100%">
+    <img src="https://www.journeyera.com/wp-content/uploads/2016/11/what-to-do-in-oslob-CEBU-0602287.jpg" style="width:100%">
+
+  </div>
+  <div class="column">
+    <img src="https://gttp.imgix.net/226440/x/0/oslob-cebu-travel-guide-more-than-just-whale-sharks-8.jpg?auto=compress%2Cformat&ch=Width%2CDPR&dpr=1&ixlib=php-3.3.0&w=883" style="width:100%">
+    <img src="https://www.phillife.co/wp-content/uploads/2021/01/jjj-1-min-678x381.jpeg" style="width:100%">
+    <img src="https://sugbo.ph/wp-content/uploads/2018/08/whale-shark-butanding-oslob-cebu-1.jpg" style="width:100%">
+
+  </div>  
+  <div class="column">
+    <img src="https://www.travel-palawan.com/wp-content/uploads/2018/01/whale-shark-watching.jpg" style="width:100%">
+    <img src="https://www.vacationhive.com/images/hives/16/16-oslob-banner-2022.jpg" style="width:100%">
+    <img src="https://www.worldbeachguide.com/photos/oslob-sumilon-philippines.jpg" style="width:100%">
+   
+  </div>
+  <div class="column">
+    <img src="https://www.action-philippines.com/wp-content/uploads/2017/10/whaleshark_boat2000x1200-2000x1125.jpg" style="width:100%">
+    <img src="https://image.kkday.com/v2/image/get/s1.kkday.com/product_131227/20220714094050_HdKjk/jpg" style="width:100%">
+    <img src="https://www.cebucitytour.com/oslob/wp-content/uploads/sites/5/2020/04/Whaleshark-Oslob.jpg" style="width:100%">
+   
+  </div>
+</div>
+<br>
+
+<h1 style="text-align:center; color:white; font-family:cursive;"> Oslob Cebu: More Than Just Whale Sharks</h1>
+<div class="container">
+<p style="text-align:justify; color:white; font-family:serif">  Since it is one of the very few places in the world where you can see these underwater gentle giants, this transformed the once quiet coastal town into a buzzing tourist destination.
+
+However, Oslob’s whale watching tours are controversial since naturally migratory creatures like the whale sharks are not supposed to be lured to specific spots by feeding them.
+
+This practice not only disrupts their natural behavior and diet but also makes them prone to injuries and poaching. If you want to swim with whale sharks in the Philippines, you can join a whale watching tour in Donsol, Puerto Princesa, or Sogod Bay where the gentle giants are not fed and tours are regulated.
+
+Don’t fret, diving with the whale sharks is not the only awesome attraction you can experience in Oslob, Cebu. You'll find the most surreal sandbar in the Philippines, majestic horsetail waterfalls, coral reefs, secret caves, heritage sites, and Spanish ruins. The real beauty of Oslob, Cebu is not only found underwater but also above the waters.
+
+If you’ve only heard about the whale sharks in Oslob, Cebu then you’re in for a treat because this ultimate guide will give you insider details and secret trails that would take you to all of its hidden gems.</p>
+
+<style>
+    footer {
+  text-align: center;
+  padding: 2px;
+  background-color: Darkgrey;
+  color: white;
+}
+    
+</style>
+<body>
+    <footer>
+        <br>
+  <a href="HistoryofPH.html"> About Philippines </a> &nbsp
+  <a href="Luzon1.html"> Tourist Attractions </a> &nbsp
+  <a href="VideoGallery.html"> Video Gallery </a> &nbsp
+  <a href="LoginForm.html"> Login </a> &nbsp
+  <a href="ContactForm.html"> Contact Us </a></p>
+  <p> Copyright@2022. All Rights Reserved </p>
+</footer>
+
+</body>
+</html>

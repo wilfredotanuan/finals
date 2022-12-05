@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body{
+    background-image: url(https://st.depositphotos.com/29836654/52116/v/600/depositphotos_521162514-stock-illustration-eps10-vector-patriotic-background-philippines.jpg);
+    background-size: 110%;
+    background-repeat: no repeat;
+  }
+      }
+</style>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+  text-align: center;
+  padding: 32px;
+}
+
+.row {
+  display: -ms-flexbox; /* IE 10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE 10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create two equal columns that sits next to each other */
+.column {
+  -ms-flex: 50%; /* IE 10 */
+  flex: 50%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 10px 16px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+<div class="w3-sidebar w3-bar-block w3-black" style="width:330px;" id="mySidebar">
+  <button class="w3-bar-item w3-xxlarge w3-serif w3-silver"
+  onclick="w3_close()"> Philippines &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &times;</button>
+  <br>
+  <a href="index.html" class="w3-bar-item w3-button w3-large w3-serif"> <i class="fa fa-home w3-xlarge"> &nbsp </i> Home </a>
+  <a href="HistoryofPH.html" class="w3-bar-item w3-button w3-large w3-serif"> <i class="fa fa-book w3-xlarge"> &nbsp </i> History </a>
+  <a href="Geography.html" class="w3-bar-item w3-button w3-large w3-serif"><i class="fa fa-file w3-xlarge"> &nbsp </i> Geography and Environment </a>
+  <a href="Demographics.html" class="w3-bar-item w3-button w3-large w3-serif"><i class="fa fa-handshake-o w3-xlarge"> &nbsp </i> Demographics </a>
+  <a href="Culture.html" class="w3-bar-item w3-button w3-large w3-serif"><i class="fa fa-pencil w3-xlarge"> &nbsp </i> Culture </a>
+  <br>
+   <button class="w3-bar-item w3-xlarge w3-serif w3-gray"><i class="fa fa-map">&nbsp</i> Tourist Attractions </button>
+   <br>
+  
+  
+  <button class="w3-button w3-block w3-left-align w3-large w3-serif" onclick="myAccFunc()">&nbsp
+Luzon <i class="fa fa-caret-down"></i>
+  </button>
+  <div id="demoAcc1" class="w3-hide w3-white w3-card">
+    <a href="Luzon1.html" class="w3-bar-item w3-button"> Mines View Park </a>
+    <a href="Luzon2.html" class="w3-bar-item w3-button"> Mayon Volcano </a>
+    <a href="Luzon3.html" class="w3-bar-item w3-button"> Banaue Rice Terraces </a>
+  </div>
+
+
+ <button class="w3-button w3-block w3-left-align w3-large w3-serif" onclick="myAccFun()">&nbsp
+Visayas <i class="fa fa-caret-down"></i>
+  </button>
+  <div id="demoAcc2" class="w3-hide w3-white w3-card">
+    <a href="Visayas1.html" class="w3-bar-item w3-button">Boracay</a>
+    <a href="Visayas2.html" class="w3-bar-item w3-button">Chocolate Hills - Bohol</a>
+    <a href="Visayas3.html" class="w3-bar-item w3-button"> Oslob - Cebu </a>
+  </div>
+
+
+ <button class="w3-button w3-block w3-left-align w3-large w3-serif" onclick="myAccFu()">&nbsp 
+Mindanao <i class="fa fa-caret-down"></i>
+  </button>
+  <div id="demoAcc3" class="w3-hide w3-white w3-card">
+    <a href="Mindanao1.html" class="w3-bar-item w3-button"> Island Garden City of Samal </a>
+    <a href="Mindanao2.html" class="w3-bar-item w3-button">Tinuy-an Falls</a>
+    <a href="Mindanao3.html" class="w3-bar-item w3-button">Daku Island</a>
+
+  </div>
+  <br>
+   <button class="w3-bar-item w3-xlarge w3-serif w3-gray"><i class="fa fa-film">&nbsp</i> Gallery</button>
+   <br>
+  <a href="VideoGallery.html" class="w3-bar-item w3-button w3-large w3-serif"><i class="fa fa-image w3-xlarge">&nbsp</i> &nbsp Video Gallery</a>
+  <br>
+  <button class="w3-bar-item w3-xlarge w3-serif w3-gray"><i class="fa fa-comments-o">&nbsp</i> Reach us out!</button>
+  <br>
+  <a href="LoginForm.html" class="w3-bar-item w3-button w3-large w3-serif"><i class="fa fa-address-book w3-xlarge">&nbsp</i> Log-in</a>
+  <a href="ContactForm.html" class="w3-bar-item w3-button w3-large w3-serif"><i class="fa fa-phone w3-xlarge">&nbsp</i> Contact Us</a>
+<br>
+</div>
+
+<div>
+  <button class="w3-button w3-xxlarge" onclick="w3_open()">&#9776;</button>
+  <div class="w3-container">
+</div>
+
+
+<script>
+function myAccFunc() {
+  var x = document.getElementById("demoAcc1");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+    x.previousElementSibling.className += " w3-green";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+    x.previousElementSibling.className = 
+    x.previousElementSibling.className.replace(" w3-green", "");
+  }
+}
+function myAccFun() {
+  var x = document.getElementById("demoAcc2");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+    x.previousElementSibling.className += " w3-green";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+    x.previousElementSibling.className = 
+    x.previousElementSibling.className.replace(" w3-green", "");
+  }
+}
+function myAccFu() {
+  var x = document.getElementById("demoAcc3");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+    x.previousElementSibling.className += " w3-green";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+    x.previousElementSibling.className = 
+    x.previousElementSibling.className.replace(" w3-green", "");
+  }
+}
+
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+}
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Header -->
+<div class="header" id="myHeader">
+    <hr style="height:2px;border-width:0;color:gray;background-color:gray">
+  <h1> The Culture of the Philippines </h1>
+    <hr style="height:2px;border-width:0;color:gray;background-color:gray">
+  <p>Click on the buttons to view the beautiful culture of our country.</p>
+  <button class="btn" onclick="one()">1</button>
+  <button class="btn active" onclick="two()">2</button>
+  <button class="btn" onclick="four()">3</button>
+</div>
+
+<!-- Photo Grid -->
+<div class="row"> 
+  <div class="column">
+    <img src="https://img.theculturetrip.com/wp-content/uploads/2019/10/w2t6xm.jpg" style="width:100%">
+    <img src="https://www.holidify.com/images/cmsuploads/compressed/dance-festival-philippines-fair-traditional-dance-philippines-festival-810395-pxhere.com_20210301150304.jpg" style="width:100%">
+    <img src="https://itsmorefuninthephilippines.co.uk/wp-content/uploads/Tandaya-Festival-600jpg.jpg" style="width:100%">
+    <img src="https://bigseventravel.com/wp-content/uploads/2020/04/chloe-evans-CXgipFEHrq4-unsplash-1920x1280.jpg" style="width:100%">
+
+  </div>
+  <div class="column">
+    <img src="https://asiasomeday.com/philippine/wp-content/uploads/sites/7/2020/10/philippines_Tribal-Man_Photo-Credit-almatel.jpg" style="width:100%">
+    <img src="https://ca-times.brightspotcdn.com/dims4/default/8664f4b/2147483647/strip/true/crop/2048x1311+0+0/resize/1200x768!/quality/80/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F1c%2Fc5%2F9053389e0d8f119592414accf947%2Fsdut-2012-year-in-review-entertainm-20160904-039" style="width:100%">
+    <img src="https://reloc8asia.com/wp-content/uploads/hitoshi-namura-nzEZBYpQmeg-unsplash-1.jpg" style="width:100%">
+    <img src="https://manilastandard.net/wp-content/uploads/2021/03/79695_philippine_intangible4.jpg" style="width:100%">
+
+  </div>  
+  <div class="column">
+    <img src="https://2hottravellers.com/wp-content/uploads/2020/09/Filipino-Culture.jpg" style="width:100%">
+    <img src="https://partners.wsj.com/tpbphl/philippines-unending-discovery/wp-content/uploads/sites/246/2020/05/article1_tpbphl.png" style="width:100%">
+    <img src="https://gttp.imgix.net/281168/x/0/10-best-cultural-experiences-and-tours-in-the-philippines-11.jpg?auto=compress%2Cformat&ch=Width%2CDPR&dpr=1&ixlib=php-3.3.0&w=883" style="width:100%">
+    <img src="https://lh4.googleusercontent.com/5HThvbdi0_t7Y4tP7QN17Sm16pjqqBmPiWRSuFSt54YxRBNeauAMudZPR7fmGGZWKy9P4o33fmJm0IEmZreyVAS7j5UR-ImaVcbO8K1nzHOsxE8gZr9gXDaa2vyXybyxPSwFr1Su" style="width:100%">
+
+  </div>
+  <div class="column">
+    <img src="https://1.bp.blogspot.com/-BtQL0-5e4HY/Xqs_c7RyX8I/AAAAAAAAATc/dgSOvaOxmWcFvGV-UIlX0IvyrdkmUkz0wCLcBGAsYHQ/s1600/philipines%2Bcultures.jpg" style="width:100%">
+    <img src="https://aphrodite.gmanetwork.com/imagefiles/1000/1544412069_1788844208_13_ent.jpg" style="width:100%">
+    <img src="https://travelauthenticphilippines.com/wp-content/uploads/caraga_4_philippines.jpg" style="width:100%">
+    <img src="https://i.pinimg.com/originals/9a/da/a8/9adaa8ad1f7279d958d8080fa6bcebcd.jpg" style="width:100%">
+
+  </div>
+</div>
+
+<script>
+// Get the elements with class="column"
+var elements = document.getElementsByClassName("column");
+
+// Declare a loop variable
+var i;
+
+// Full-width images
+function one() {
+    for (i = 0; i < elements.length; i++) {
+    elements[i].style.msFlex = "100%";  // IE10
+    elements[i].style.flex = "100%";
+  }
+}
+
+// Two images side by side
+function two() {
+  for (i = 0; i < elements.length; i++) {
+    elements[i].style.msFlex = "50%";  // IE10
+    elements[i].style.flex = "50%";
+  }
+}
+
+// Four images side by side
+function four() {
+  for (i = 0; i < elements.length; i++) {
+    elements[i].style.msFlex = "25%";  // IE10
+    elements[i].style.flex = "25%";
+  }
+}
+
+// Add active class to the current button (highlight it)
+var header = document.getElementById("myHeader");
+var btns = header.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+<br>
+<hr>
+<h1 style ="text-align:center; color:darkblue; background-color: white; font-family:serif"> Let's Talk about Culture! </h1>
+
+<p style="color:white; background-color:grey;"> The most commonly spoken indigenous languages are Tagalog and Cebuano, with 23.8 million (45 million speakers as Filipino) and 16 million speakers, respectively. Another 11 indigenous languages have at least one million native speakers: Ilokano, Hiligaynon, Waray, various Bikol languages, Kapampangan, Pangasinan, Maranao, Maguindanao, Kinaray-a, Zamboangueño and Tausug. One or more of these are spoken as a mother tongue by more than 93% of the population. Filipino and English are the official languages but there are between 120 and 170 distinct indigenous Philippine languages (depending on expert classifications). </p>
+<h2 style ="text-align:center; font-family:cursive; background-color:darkblue; color:white;"> Things you should know about the Philippines Culture</h2>
+
+<ul style= "background-color:brown; color:white; font-family:fantasy">
+  <li>Filipinos are very resilient.</li>
+<p> In times of calamities and catastrophes, Filipinos always manage to rise above the challenge. Instead of wallowing, they manage to pick themselves up and smile.</p>
+  <li>Filipinos take pride in their families </li>
+  <p> In the Philippines, it is family first. So whether you are part of the immediate family or you belong to the third or fourth generation, you are treated as a family member. Sometimes, even the closest of friends are considered family, too.</p>
+  <li> Filipinos are very religious</li>
+  <p> In all corners of a Filipino house, you can find brazen images of crosses and other religious paraphernalia. They go to church every Sunday, or sometimes even twice or three times a week.</p>
+</ul>  
+    <hr style="height:2px;border-width:0;color:gray;background-color:gray">
+<h1 style ="text-align:center; color:red; background-color: silver; font-family:serif"> Philippine Culture: What Makes the Filipinos Different From the Rest of the World
+ </h1>
+    <hr style="height:2px;border-width:0;color:gray;background-color:gray">
+    <h1 style ="font-family:serif; background-color:darkblue; color:white;"> Filipino Culture </h1>
+    <h2 style="background-color: white;"> The Filipino culture has varied influences from previous colonizations, deriving mainly from the culture of Spain and America. You can easily notice it from the architecture to the cultural beliefs in the Philippines. Despite all of these foreign influences, the old Asian Filipino culture has been retained and are clearly seen in their way of life, cultural beliefs in the Philippines, Filipino customs and traditions. Wherever you go, the Filipino culture and values are very evident and have largely been appreciated and even applauded in many parts of the world.</h2>
+
+    <style>
+    footer {
+  text-align: center;
+  padding: 2px;
+  background-color: Darkgrey;
+  color: white;
+}
+    
+</style>
+<body>
+    <footer>
+        <br>
+  <a href="HistoryofPH.html"> About Philippines </a> &nbsp
+  <a href="Luzon1.html"> Tourist Attractions </a> &nbsp
+  <a href="VideoGallery.html"> Video Gallery </a> &nbsp
+  <a href="LoginForm.html"> Login </a> &nbsp
+  <a href="ContactForm.html"> Contact Us </a></p>
+  <p> Copyright@2022. All Rights Reserved </p>
+</footer>
+    
+
+</body>
+</html>

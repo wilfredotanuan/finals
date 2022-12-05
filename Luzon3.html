@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body{
+    background-image: url(https://www.zenrooms.com/blog/wp-content/uploads/2020/02/banaue.jpg);
+    background-size: 110%;
+    background-repeat: no repeat;
+  }
+   .container {
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.7);
+        text-align: justify;
+        line-height: 1.3;
+        border-spacing: 0px;
+        position: relative;
+      }
+</style>
+<body>
+
+<div class="w3-sidebar w3-bar-block w3-black" style="width:330px;" id="mySidebar">
+  <button class="w3-bar-item w3-xxlarge w3-serif w3-silver"
+  onclick="w3_close()"> Philippines &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &times;</button>
+  <br>
+  <a href="index.html" class="w3-bar-item w3-button w3-large w3-serif"> <i class="fa fa-home w3-xlarge"> &nbsp </i> Home </a>
+  <a href="HistoryofPH.html" class="w3-bar-item w3-button w3-large w3-serif"> <i class="fa fa-book w3-xlarge"> &nbsp </i> History </a>
+  <a href="Geography.html" class="w3-bar-item w3-button w3-large w3-serif"><i class="fa fa-file w3-xlarge"> &nbsp </i> Geography and Environment </a>
+  <a href="Demographics.html" class="w3-bar-item w3-button w3-large w3-serif"><i class="fa fa-handshake-o w3-xlarge"> &nbsp </i> Demographics </a>
+  <a href="Culture.html" class="w3-bar-item w3-button w3-large w3-serif"><i class="fa fa-pencil w3-xlarge"> &nbsp </i> Culture </a>
+  <br>
+   <button class="w3-bar-item w3-xlarge w3-serif w3-gray"><i class="fa fa-map">&nbsp</i> Tourist Attractions </button>
+   <br>
+  
+  
+  <button class="w3-button w3-block w3-left-align w3-large w3-serif" onclick="myAccFunc()">&nbsp
+Luzon <i class="fa fa-caret-down"></i>
+  </button>
+  <div id="demoAcc1" class="w3-hide w3-white w3-card">
+    <a href="Luzon1.html" class="w3-bar-item w3-button"> Mines View Park </a>
+    <a href="Luzon2.html" class="w3-bar-item w3-button"> Mayon Volcano </a>
+    <a href="Luzon3.html" class="w3-bar-item w3-button"> Banaue Rice Terraces </a>
+  </div>
+
+
+ <button class="w3-button w3-block w3-left-align w3-large w3-serif" onclick="myAccFun()">&nbsp
+Visayas <i class="fa fa-caret-down"></i>
+  </button>
+  <div id="demoAcc2" class="w3-hide w3-white w3-card">
+    <a href="Visayas1.html" class="w3-bar-item w3-button">Boracay</a>
+    <a href="Visayas2.html" class="w3-bar-item w3-button">Chocolate Hills - Bohol</a>
+    <a href="Visayas3.html" class="w3-bar-item w3-button"> Oslob - Cebu </a>
+  </div>
+
+
+ <button class="w3-button w3-block w3-left-align w3-large w3-serif" onclick="myAccFu()">&nbsp 
+Mindanao <i class="fa fa-caret-down"></i>
+  </button>
+  <div id="demoAcc3" class="w3-hide w3-white w3-card">
+    <a href="Mindanao1.html" class="w3-bar-item w3-button"> Island Garden City of Samal </a>
+    <a href="Mindanao2.html" class="w3-bar-item w3-button">Tinuy-an Falls</a>
+    <a href="Mindanao3.html" class="w3-bar-item w3-button">Daku Island</a>
+
+  </div>
+  <br>
+   <button class="w3-bar-item w3-xlarge w3-serif w3-gray"><i class="fa fa-film">&nbsp</i> Gallery</button>
+   <br>
+  <a href="VideoGallery.html" class="w3-bar-item w3-button w3-large w3-serif"><i class="fa fa-image w3-xlarge">&nbsp</i> &nbsp Video Gallery</a>
+  <br>
+  <button class="w3-bar-item w3-xlarge w3-serif w3-gray"><i class="fa fa-comments-o">&nbsp</i> Reach us out!</button>
+  <br>
+  <a href="LoginForm.html" class="w3-bar-item w3-button w3-large w3-serif"><i class="fa fa-address-book w3-xlarge">&nbsp</i> Log-in</a>
+  <a href="ContactForm.html" class="w3-bar-item w3-button w3-large w3-serif"><i class="fa fa-phone w3-xlarge">&nbsp</i> Contact Us</a>
+<br>
+</div>
+
+<div>
+  <button class="w3-button w3-xxlarge" onclick="w3_open()">&#9776;</button>
+  <div class="w3-container">
+</div>
+
+
+<script>
+function myAccFunc() {
+  var x = document.getElementById("demoAcc1");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+    x.previousElementSibling.className += " w3-green";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+    x.previousElementSibling.className = 
+    x.previousElementSibling.className.replace(" w3-green", "");
+  }
+}
+function myAccFun() {
+  var x = document.getElementById("demoAcc2");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+    x.previousElementSibling.className += " w3-green";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+    x.previousElementSibling.className = 
+    x.previousElementSibling.className.replace(" w3-green", "");
+  }
+}
+function myAccFu() {
+  var x = document.getElementById("demoAcc3");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+    x.previousElementSibling.className += " w3-green";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+    x.previousElementSibling.className = 
+    x.previousElementSibling.className.replace(" w3-green", "");
+  }
+}
+
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+}
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+</style>
+</head>
+<style>
+body {
+  font-family: Verdana, sans-serif;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.row > .column {
+  padding: 0 8px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column {
+  float: left;
+  width: 25%;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 1200px;
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.mySlides {
+  display: none;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+img {
+  margin-bottom: -4px;
+}
+
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;
+}
+
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+img.hover-shadow {
+  transition: 0.3s;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+img {
+  border: 5px solid green;
+}
+</style>
+<body>
+    
+<hr>
+<br>
+<h1 style="text-align:center; font-family:fantasy; color:black; line-height:20%"> Banauwe Rice Terraces</h1>
+ <p style="text-align:center; font-family: serif; line-height:0.5%; color:BLACK;"> Central Luzon, Philippines </p>
+ <br>
+<hr>
+<br>
+<br>
+<div class="row">
+  <div class="column">
+    <img src="https://i.pinimg.com/originals/40/62/23/4062238abd73dd5667ef9da49b574845.png"https://i.pinimg.com/originals/40/62/23/4062238abd73dd5667ef9da49b574845.png style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="https://images.squarespace-cdn.com/content/v1/5a87961cbe42d637c54cab93/1566397259929-MUPX5AGO4VCUFQNY8SLL/batad-and-banaue-guide.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="https://www.telegraph.co.uk/content/dam/Travel/2017/March/banaue.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="https://travelingcanucks.com/wp-content/uploads/2014/10/banaue-3.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+  </div>
+</div>
+
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides">
+      <div class="numbertext">1 / 4</div>
+      <img src="img_nature_wide.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">2 / 4</div>
+      <img src="img_snow_wide.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 4</div>
+      <img src="img_mountains_wide.jpg" style="width:100%">
+    </div>
+    
+    <div class="mySlides">
+      <div class="numbertext">4 / 4</div>
+      <img src="img_lights_wide.jpg" style="width:100%">
+    </div>
+    
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+
+    <div class="column">
+      <img class="demo cursor" src="img_nature_wide.jpg" style="width:100%" onclick="currentSlide(1)" alt="Nature and sunrise">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="img_snow_wide.jpg" style="width:100%" onclick="currentSlide(2)" alt="Snow">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="img_mountains_wide.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="img_lights_wide.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+    </div>
+  </div>
+</div>
+
+<script>
+function openModal() {
+  document.getElementById("myModal").style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById("myModal").style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+<br>
+<h1 style="text-align:center; color:white; font-family:cursive;"> What is special about the Banaue?</h1>
+<hr><div class="container">
+      <h1 style="color:white;
+ font-family:serif;
+"> The Banaue Rice Terraces and Ifugao People <br>
+      </h1>
+      <p style="color:white; font-family:helvetica;"> 
+    The Banaue Rice Terraces are a National Cultural Treasure of the Philippines and are considered to be the 8th Natural Wonder of the World by many Filipinos.  The view is spectacular, majestic and inspiring.  The Banaue Rice Terraces are located on the mountains of Ifugao and were carved there about 2,000 years ago by the ancestors of the present day Philippines. It is said that they were built by hand and were used to plant rice. </p>
+      <h1 style="color:white;
+ font-family:serif"> Some Interesting Facts: </h1>
+      <p style="color:white;
+ font-family:helvetica;
+"> If you are lucky, you will be greeted by an Ifugao warrior who may scare you with his weapons, appearance, and demeanor but he is part of the spectacle that makes the Banaue Terrace amazing and worth seeing.
+
+</p>
+      <ul style="color: white;
+ font-family: helvetica;
+">
+        <li> They are located about 1500 meters (5,000 Ft.) above the sea level on a 10,360 square kilometers (about 6000 square miles) mountainside.</li>
+        <br>
+        <li> Today, although a few Ifugaos still plant vegetables on the terraces, most prefer concentrating on the tourist dollars brought by those who want to see the historic terraces. </li>
+        <br>
+        <li> In 1995, the UNESCO declared it a world heritage center. 6. The Banaue Rice Terraces look like a giant’s step stretching skywards. Some of the terraces are as high as 4,000 meters above the sea level. </li>
+    </div>
+
+    <style>
+    footer {
+  text-align: center;
+  padding: 2px;
+  background-color: Darkgrey;
+  color: white;
+}
+    
+</style>
+<body>
+    <footer>
+        <br>
+ <a href="HistoryofPH.html"> About Philippines </a> &nbsp
+  <a href="Luzon1.html"> Tourist Attractions </a> &nbsp
+  <a href="VideoGallery.html"> Video Gallery </a> &nbsp
+  <a href="LoginForm.html"> Login </a> &nbsp
+  <a href="ContactForm.html"> Contact Us </a></p>
+  <p> Copyright@2022. All Rights Reserved </p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html>
+<title> Final Exam </title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body{
+    background-image: url(https://images.fineartamerica.com/images-medium-large/manila-skyline-arj-munoz.jpg);
+    background-size: 110%;
+    background-repeat: no repeat;
+  }
+ .container {
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.7);
+        text-align: justify;
+        line-height: 1.3;
+        border-spacing: 0px;
+        position: relative;
+      }
+.header_date{
+  width: 450px;
+  float:right;
+  margin-top: 20px;
+}
+.header_logo img{
+   position: relative;
+    float: left;
+    width:  80px;
+    height: 50px;
+    margin-left: 60px;
+    margin-top: -49px;
+    background-position: 50% 50%;
+    background-repeat:   no-repeat;
+    background-size:     cover;
+}
+</style>
+<body>
+  <div class="header_date">
+      <span id='date-time' class="header__input" > </span>
+        <i class='bx bx-calendar header__icon'></i>
+  </div>
+<script>
+  var dt = new Date();
+document.getElementById('date-time').innerHTML=dt;
+</script>
+
+<div class="w3-sidebar w3-bar-block w3-black" style="width:330px;" id="mySidebar">
+  <button class="w3-bar-item w3-xxlarge w3-serif w3-silver"
+  onclick="w3_close()"> Philippines &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &times;</button>
+  <br>
+ <a href="index.html" class="w3-bar-item w3-button w3-large w3-serif"> <i class="fa fa-home w3-xlarge"> &nbsp </i> Home </a>
+  <a href="HistoryofPH.html" class="w3-bar-item w3-button w3-large w3-serif"> <i class="fa fa-book w3-xlarge"> &nbsp </i> History </a>
+  <a href="Geography.html" class="w3-bar-item w3-button w3-large w3-serif"><i class="fa fa-file w3-xlarge"> &nbsp </i> Geography and Environment </a>
+  <a href="Demographics.html" class="w3-bar-item w3-button w3-large w3-serif"><i class="fa fa-handshake-o w3-xlarge"> &nbsp </i> Demographics </a>
+  <a href="Culture.html" class="w3-bar-item w3-button w3-large w3-serif"><i class="fa fa-pencil w3-xlarge"> &nbsp </i> Culture </a>
+  <br>
+   <button class="w3-bar-item w3-xlarge w3-serif w3-gray"><i class="fa fa-map">&nbsp</i> Tourist Attractions </button>
+   <br>
+  
+  
+  <button class="w3-button w3-block w3-left-align w3-large w3-serif" onclick="myAccFunc()">&nbsp
+Luzon <i class="fa fa-caret-down"></i>
+  </button>
+  <div id="demoAcc1" class="w3-hide w3-white w3-card">
+    <a href="Luzon1.html" class="w3-bar-item w3-button"> Mines View Park </a>
+    <a href="Luzon2.html" class="w3-bar-item w3-button"> Mayon Volcano </a>
+    <a href="Luzon3.html" class="w3-bar-item w3-button"> Banaue Rice Terraces </a>
+  </div>
+
+
+ <button class="w3-button w3-block w3-left-align w3-large w3-serif" onclick="myAccFun()">&nbsp
+Visayas <i class="fa fa-caret-down"></i>
+  </button>
+  <div id="demoAcc2" class="w3-hide w3-white w3-card">
+    <a href="Visayas1.html" class="w3-bar-item w3-button">Boracay</a>
+    <a href="Visayas2.html" class="w3-bar-item w3-button">Chocolate Hills - Bohol</a>
+    <a href="Visayas3.html" class="w3-bar-item w3-button"> Oslob - Cebu </a>
+  </div>
+
+
+ <button class="w3-button w3-block w3-left-align w3-large w3-serif" onclick="myAccFu()">&nbsp 
+Mindanao <i class="fa fa-caret-down"></i>
+  </button>
+  <div id="demoAcc3" class="w3-hide w3-white w3-card">
+    <a href="Mindanao1.html" class="w3-bar-item w3-button"> Island Garden City of Samal </a>
+    <a href="Mindanao2.html" class="w3-bar-item w3-button">Tinuy-an Falls</a>
+    <a href="Mindanao3.html" class="w3-bar-item w3-button">Daku Island</a>
+
+  </div>
+  <br>
+   <button class="w3-bar-item w3-xlarge w3-serif w3-gray"><i class="fa fa-film">&nbsp</i> Gallery</button>
+   <br>
+  <a href="VideoGallery.html" class="w3-bar-item w3-button w3-large w3-serif"><i class="fa fa-image w3-xlarge">&nbsp</i> &nbsp Video Gallery</a>
+  <br>
+  <button class="w3-bar-item w3-xlarge w3-serif w3-gray"><i class="fa fa-comments-o">&nbsp</i> Reach us out!</button>
+  <br>
+  <a href="LoginForm.html" class="w3-bar-item w3-button w3-large w3-serif"><i class="fa fa-address-book w3-xlarge">&nbsp</i> Log-in</a>
+  <a href="ContactForm.html" class="w3-bar-item w3-button w3-large w3-serif"><i class="fa fa-phone w3-xlarge">&nbsp</i> Contact Us</a>
+<br>
+</div>
+
+<div>
+  <button class="w3-button w3-xxlarge" onclick="w3_open()">&#9776;</button>
+  <div class="w3-container">
+</div>
+ <div class="header_logo">
+     <img src="https://upload.wikimedia.org/wikipedia/commons/8/84/Coat_of_arms_of_the_Philippines.svg" alt="logo" class="header__logo">
+      <img src="https://itsmorefuninthephilippines.co.uk/wp-content/uploads/IMFITP_multicolored.png" alt="Choose Philippine Logo - It's More Fun In The Philippines Logo " class="header__logo">
+ </div>
+
+
+<script>
+function myAccFunc() {
+  var x = document.getElementById("demoAcc1");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+    x.previousElementSibling.className += " w3-green";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+    x.previousElementSibling.className = 
+    x.previousElementSibling.className.replace(" w3-green", "");
+  }
+}
+function myAccFun() {
+  var x = document.getElementById("demoAcc2");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+    x.previousElementSibling.className += " w3-green";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+    x.previousElementSibling.className = 
+    x.previousElementSibling.className.replace(" w3-green", "");
+  }
+}
+function myAccFu() {
+  var x = document.getElementById("demoAcc3");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+    x.previousElementSibling.className += " w3-green";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+    x.previousElementSibling.className = 
+    x.previousElementSibling.className.replace(" w3-green", "");
+  }
+}
+
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+}
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+</style>
+
+</head>
+<body> 
+ 
+
+<hr>
+<h1 style="text-align:center; font-family:Monospace; color: white;"> Welcome to the Philippines!</h1> 
+<hr><div class="container">
+      <h1 style="color:white;
+ font-family:helvetica;
+"> Know more about this country: <br>
+      </h1>
+      <p style="color:white; font-family:helvetica;"> 
+    The Philippines is known for having an abundance of beautiful beaches and delicious fruit. The collection of islands is located in Southeast Asia and was named after King Philip II of Spain. </p>
+      <h1 style="color:white;
+ font-family:helvetica"> Three Interesting Facts: </h1>
+      <p style="color:white;
+ font-family:helvetica;
+"> A presidential, representative, and democratic republic with a multi-party system. Head of government, head of state, and commander in chief of the armed forces is the president.</p>
+      <ul style="color: white;
+ font-family: helvetica;
+">
+        <li>The Philippines is made up of 7,641 islands, making it one of the largest archipelagos in the world. But more than 5,000 of the islands remain unnamed on most international maps. </li>
+        <br>
+        <li> Due to the large volume of text messages sent throughout the country, the Philippines has earned its nickname as the "text capital of the world." </li>
+        <br>
+        <li>The Philippines is the only Asian nation that is predominantly Christian. While many of its Southeast Asian neighbors practice Buddhism, 86 percent of the Filipino population is Roman Catholic.</li>
+    </div>
+    
+    <style>
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -20px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+</style>
+<body>
+
+<h2 style="text-align:center; font-family:cursive; color: grey"> The Beauty of the Philippines</h2>
+
+<div class="container">
+  <div class="mySlides">
+    <div class="numbertext">1 / 6</div>
+    <img src="https://www.shutterstock.com/image-photo/black-white-image-baguio-city-600w-1011298027.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+    <img src="https://idreamedofthis.com/images/st-dominic-of-guzman-parish-church-in-sto-domingo-albay-philippines-sony-rx100iii-black-and-white-nathan-allen-via-idreamedofthis.png" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTo-K0294_tGBnbsCWMz9KvPa0H0JhcZ_SQvI1ORq4eClo-MZ5dKWsjnT2y0h-W2zIOU8w&usqp=CAU" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSMTkBx2EaRi7GVPpzKdR0vSESe8h_xGiAxQ&usqp=CAU" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 6</div>
+    <img src="https://images.squarespace-cdn.com/content/v1/576b017229687f1fd26b9117/1467659417136-1H8IGOBJJGKKIGTULQ4H/35mmstreet-com-dscf5835-edit.jpg" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">6 / 6</div>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUdcEgNYkg02zDXF7ImrekIrgBvklbBqqZqQ&usqp=CAU" style="width:100%">
+  </div>
+    
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="https://www.shutterstock.com/image-photo/black-white-image-baguio-city-600w-1011298027.jpg" style="width:100%" onclick="currentSlide(1)" alt="BAguio">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://idreamedofthis.com/images/st-dominic-of-guzman-parish-church-in-sto-domingo-albay-philippines-sony-rx100iii-black-and-white-nathan-allen-via-idreamedofthis.png" style="width:100%" onclick="currentSlide(2)" alt="Philippines Provinces">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTo-K0294_tGBnbsCWMz9KvPa0H0JhcZ_SQvI1ORq4eClo-MZ5dKWsjnT2y0h-W2zIOU8w&usqp=CAU" style="width:100%" onclick="currentSlide(3)" alt="Jeepney">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSMTkBx2EaRi7GVPpzKdR0vSESe8h_xGiAxQ&usqp=CAU" style="width:100%" onclick="currentSlide(4)" alt="Train">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://images.squarespace-cdn.com/content/v1/576b017229687f1fd26b9117/1467659417136-1H8IGOBJJGKKIGTULQ4H/35mmstreet-com-dscf5835-edit.jpg" style="width:100%" onclick="currentSlide(5)" alt="People">
+    </div>    
+    <div class="column">
+      <img class="demo cursor" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUdcEgNYkg02zDXF7ImrekIrgBvklbBqqZqQ&usqp=CAU" style="width:100%" onclick="currentSlide(6)" alt="Treese">
+    </div>
+  </div>
+</div>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("demo");
+  let captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+    
+</body>
+<style>
+    footer {
+  text-align: center;
+  padding: 2px;
+  background-color: Darkgrey;
+  color: white;
+}
+    
+</style>
+<body>
+    <footer>
+        <br>
+ <a href="HistoryofPH.html"> About Philippines </a> &nbsp
+  <a href="Luzon1.html"> Tourist Attractions </a> &nbsp
+  <a href="VideoGallery.html"> Video Gallery </a> &nbsp
+  <a href="LoginForm.html"> Login </a> &nbsp
+  <a href="ContactForm.html"> Contact Us </a></p>
+  <p> Copyright@2022. All Rights Reserved </p>
+</footer>
+</body>
+
+
+      
+</body>
+</html>
